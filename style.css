@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+:root {
+    --shadow-color: hsla(0, 0%, 8%, 0.5);
+    --text-color: rgba(215, 215, 215, 0.5);
+    --container-bg-color: rgba(21, 21, 21, 0.35);
+    --background-color: rgba(21, 21, 21, 0.1);
+    --head-background-color: rgba(21, 21, 21, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    margin: 0;
+    /* color: #fff; */
+
+    background: radial-gradient(
+        circle at top left,
+        #150411 0%,
+        #5e0b0c 25%,
+        #9b1d0f 50%,
+        #d02c1f 75%,
+        #31335f 100%
+    );
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    width: 95vw;
+    max-width: 480px;
+    background-color: var(--container-bg-color);
+    border-radius: 60px;
+    box-shadow: 2px 2px 15px 5px var(--shadow-color);
+    padding: 50px;
+}
+
+.container .timer-head {
+    display: inline-flex;
+    width: calc(100% + 30px);
+    height: 100px;
+    background-color: var(--head-background-color);
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    color: var(--text-color);
+    text-shadow: 4px 4px 15px var(--shadow-color);
+    box-shadow: 0px 0px 50px var(--shadow-color);
+    margin-bottom: 25px;
+}
+
+.timer-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+    font-size: 3rem;
+    font-weight: bolder;
+    border-radius: 1000px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-shadow: 4px 4px 10px var(--shadow-color);
+    box-shadow: 3px 3px 60px var(--shadow-color);
+}
+
+.seperator {
+    padding: 5px;
+}
+
+.timer-controls {
+    margin-top: 25px;
+    width: calc(100% + 30px);
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: 60px;
+}
+
+.timer-controls .timer-start,
+.timer-controls .timer-pause,
+.timer-controls .timer-reset {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    height: 90px;
+    width: 100%;
+    border-radius: 100px;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: #d7d7d7;
+        background-color: var(--background-color);
+    }
+}
